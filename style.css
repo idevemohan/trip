@@ -116,6 +116,14 @@ body {
 {
     cursor: pointer;
 }
+.stream1_toggle:hover
+{
+    background-color: #FF5d5d;
+    width: fit-content;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
 .search
 {
     border: solid 1px black;
@@ -229,6 +237,10 @@ body {
     height: auto;
     margin: 10px;
     margin-left: 150px;
+}
+.ad:hover
+{
+    transform: scale(1.2);
 }
 
 /* Explore places */
