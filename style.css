@@ -53,10 +53,55 @@ body {
 }
 
 /* Block section */
-.stream1
+.stream-bloc
 {
-    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stream-visual
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
+/* Hide all headings by default */
+.stream h1
+{
+    display: none;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+}
+
+/* Show based on radio input */
+#searchall:checked~.stream-visual .where
+{
+    display:block;
+}
+#hotels:checked~.stream-visual .stay
+{
+    display: block;
+}
+#things:checked~.stream-visual .fun
+{
+    display: block;
+}
+#restaurant:checked~.stream-visual .eat
+{
+    display: block;
+}
+#flights:checked~.stream-visual .flight
+{
+    display: block;
+}
+#holiday:checked~.stream-visual .rent
+{
+    display: block;
 }
 .stream1
 {
@@ -66,6 +111,10 @@ body {
         margin: 30px;
         padding: 10px;
         font-weight: bold;
+}
+.stream1_toggle
+{
+    cursor: pointer;
 }
 .search
 {
