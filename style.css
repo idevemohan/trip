@@ -77,6 +77,7 @@ body {
 {
     display: none;
     font-size: 60px;
+    color: rgb(35, 235, 168);
     text-align: center;
     margin-top: 40px;
     margin-bottom: 10px;
@@ -84,7 +85,7 @@ body {
 }
 
 /* Show based on radio input */
-#searchall:checked~.stream-visual .where
+ #searchall:checked~.stream-visual .where
 {
     display:block;
 }
@@ -125,7 +126,7 @@ body {
 {
     background-color:rgb(35, 235, 168);
     width: fit-content;
-    padding: 10px;
+    padding: 5px;
     border: none;
     border-radius: 20px;
 }
@@ -136,13 +137,23 @@ body {
     border-radius: 30px;
     margin-left: 20%;
     display: flex;
-    align-items: center;
+    flex-direction: row;
 }
 .search input{
     border: none;
     font-size: 16px;
     outline: none;
    
+}
+div
+{
+    padding-top: 8px;
+}
+ .search div , input
+{
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
 }
 .search button{
     padding: 12px;
@@ -155,7 +166,7 @@ body {
     width: 100px;
     border: none;
     cursor: pointer;
-    align-items: center;
+    justify-content: end;
     
 }
 .search_input:focus {
@@ -163,15 +174,18 @@ body {
 }
 .part1
 {
-    width: 1000px;
-    height: 400px;
+    width: 80%;
+    height: 500px;
     background-color:rgb(35, 235, 168);
     padding: 20px;
-    margin: 20px;
+    margin: 40px;
+    margin-left: 80px;
     border-radius: 20px;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     position: relative;
+
 }
 .part1-name
 {
@@ -197,7 +211,8 @@ body {
 }
 .part1-title h1{
     font-size: 65px;
-    font-weight: 1000;
+    font-weight: bolder;
+    padding-top: 40px;
 }
 .part1 button{
     background-color: black;
@@ -251,7 +266,6 @@ body {
     transform: scale(1.2);
 }
 
-/* Explore places */
 .exheader
 {
     margin: 20px;
@@ -263,6 +277,7 @@ body {
     padding: 10px;
     display: flex;
     gap: 10px;
+    justify-content: space-between;
     
 }
 .explore img{
@@ -281,7 +296,7 @@ body {
 {
    margin: 20px;
    padding: 20px;
-   background-color: lightgrey;
+   background-color: rgb(35, 235, 168);
 
 }
 
@@ -309,6 +324,7 @@ body {
     width: 250px;
     display: flex;
     gap: 20px;
+    justify-content: space-between;
 
 }
 .things-sec__places img
@@ -419,20 +435,15 @@ padding: 20px;
     padding: 10px;
 }
 .footer-tail2 
-{   
-    /* padding-left: 460px;
-    width: 80px;
-    height: 80px;
-    gap: 50px; */
-     
+{    
     padding-left: 400px;
     display: flex;
     gap: 10px;
     font-size: 18px;
     gap: 20px;
-}
+} 
 /* Media Queries */
-@media  screen and (max-width:600px) 
+ @media  screen and (max-width:600px) 
 {
     *{
         box-sizing: border-box;
@@ -440,7 +451,7 @@ padding: 20px;
     .body
     {   overflow-x: hidden;
         padding: 0;
-        margin: 0;
+        margin: 20px;
     }
     .navbar
     {
@@ -501,7 +512,7 @@ padding: 20px;
         padding: 8px;
         font-size: 14px;
     }
-    /* .search
+     .search
     {
         flex-direction: row;
         padding: 0 ;
@@ -509,18 +520,18 @@ padding: 20px;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-    } */
+    } 
 
 .search {
-        padding: 6px 10px;
+        padding: 10px;
         border-radius: 20px;
-        display: inline-block;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 400px;
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        width: 60%;
         overflow: hidden;
+
     }
 
     .search .fa-magnifying-glass {
@@ -529,34 +540,42 @@ padding: 20px;
     }
 
     .search input {
-        font-size: 0.9rem; /* Slightly smaller font */
-        padding: 6px;
+        font-size: 18px; /* Slightly smaller font */
+        padding: 2px;
+        align-items: center;
     }
 
     .search button {
-        font-size: 0.9rem;
-        padding: 6px ;
-        margin-left: 260px;
+        font-size:14px;
+        padding: 10px ;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: fit-content;
+        margin-left: 250px;
+        margin-bottom: 10px;
         border-radius: 15px;
     }
     .part1
     {
         flex-direction: column;
-        height: 100%;
-        padding: 15px;
+        width: 60%;
+        height: 50%;
+        margin-left: 40px;
     }
     .part1 img
     {
         width: 100%;
-        height: 100%;
+        height: 60%;
         position: relative;
+        z-index: 0;
     }
     .part1-name
     {
         position: absolute;
-        padding: none;
-        bottom: 25px;
+        bottom: 240px;
         left: 25px;
+        z-index: 1;
     }
     .part1 h1
      {
@@ -576,24 +595,35 @@ padding: 20px;
         padding: 10px 16px;
     }
     .ad{
-        width: 300px;
-        height: auto;
+        display: none;
     }
-    .part2,.part2-section,.explore
+    .part2
     {
         flex-direction: column;
         align-items: center;
         gap: 15px;
     }
-    .part2-section img
+    .part2-section
     {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .part2-section__
+    {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
         height: auto;
+    }
+    .explore
+    {
+        display: flex;
+        flex-direction: column;
     }
     .explore img
     {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 60%;
     }
     .explore-p2 img
     {
@@ -606,52 +636,70 @@ padding: 20px;
         flex-direction: column;
         padding: 20px 10px;
         gap: 20px;
-        width: 100%;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
     }
     .inspire-img-con 
      {
-        width: 100%;
+        width: 60%;
         height: auto;
         flex-direction: column;
         gap: 15px;
         text-align: center;
+        
      }
     .inspire img     
      {
-        width: 100%;
+        width: auto;
+        padding-left: 30px;
      }
      .things-sec
      {
         flex-direction: column;
-        text-align: center;
         gap: 15px;
+        align-items: center;
      }
      .things-sec__places
      {
         flex-direction: column;
         text-align: center;
         gap: 15px;
+        align-items: center;
+        justify-content: center;
+     }
+     .things-sec__places p1{
+        text-align: center;
      }
     .iconic
-    {
+    {   display: flex;
         flex-direction: column;
-        text-align: center;
         gap: 15px;
     }
     .iconic-images
-    {
+    {   display: flex;
         flex-direction: column;
-        text-align: center;
+        width: 60%;
         gap: 15px;
+        align-items: center;
+        justify-content: center;
     }
     .emptybox
     {   flex-direction: column;
-        padding: 0 10px;
         gap: 20px;
-        width: 100%;
+        width: 60%;
         height: fit-content;
-        font-size: 16px;
+        align-items: center;
+        text-align: center;
         
+    }
+    .emptybox-sec1 h1
+    {
+        font-size: 30px;
+    }
+    .emptybox-sec1 p
+    {
+        margin-left: 70px;
     }
     .emptybox-sec2 img
     {
@@ -659,24 +707,42 @@ padding: 20px;
     }
      .footer
      {
-        width: 100%;
+        width: 60%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-left: 50px;
      }   
      .footer-sec
      {
         flex-direction: column;
-        text-align: center;
         gap: 15px;
-        width: 100%;
-     }  
-    .footer-tail2 i{
+        width: 60%;
+     } 
+     .footer-tail
+     {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: 60%;
+     }
+    .footer-tail2  {
+        width: 60%;
+        display: flex;
         flex-direction: row;
-        width: 25%;
-        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        margin-right: 370px;
     }
 
-
-
-
 }
+ 
+
+
+
+
+
 
 
