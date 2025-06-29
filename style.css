@@ -40,16 +40,21 @@ body {
     border: none;
     border-color: transparent;
     cursor: pointer;
+
 }
 
 .navbar-sec3__b2 {
     padding-right: 16px;
-    background-color: black;
-    color: white;
-    padding: 10px;
+    background-color:rgb(35, 235, 168);
+    color: black;
+    padding: 15px;
     padding-left: 16px;
     border-radius: 20px;
     border: none;
+}
+.navbar-sec3__b2:hover
+{
+    transform: scale(1.2);
 }
 
 /* Block section */
@@ -118,15 +123,14 @@ body {
 }
 .stream1_toggle:hover
 {
-    background-color: #FF5d5d;
+    background-color:rgb(35, 235, 168);
     width: fit-content;
     padding: 10px;
     border: none;
     border-radius: 20px;
 }
 .search
-{
-    border: solid 1px black;
+{   border: solid 1px black;
     width: 50%;
     padding: 10px;
     border-radius: 30px;
@@ -138,6 +142,7 @@ body {
     border: none;
     font-size: 16px;
     outline: none;
+   
 }
 .search button{
     padding: 12px;
@@ -151,13 +156,16 @@ body {
     border: none;
     cursor: pointer;
     align-items: center;
+    
 }
-
+.search_input:focus {
+    outline: none;
+}
 .part1
 {
     width: 1000px;
     height: 400px;
-    background-color: #FF5d5d;
+    background-color:rgb(35, 235, 168);
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
@@ -386,8 +394,8 @@ body {
 {
     margin: 20px;
     padding: 10px;
-    background-color: #FF5d5d;
-    color: white;
+    background-color:rgb(35, 235, 168);
+    color:black;
     
 }
 .footer-sec
@@ -412,36 +420,262 @@ padding: 20px;
 }
 .footer-tail2 
 {   
-    padding-left: 460px;
+    /* padding-left: 460px;
     width: 80px;
     height: 80px;
-    gap: 50px;
+    gap: 50px; */
+     
+    padding-left: 400px;
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    gap: 20px;
 }
 /* Media Queries */
 @media  screen and (max-width:600px) 
 {
+    *{
+        box-sizing: border-box;
+    }
     .body
-    {
-        margin: 20px;
+    {   overflow-x: hidden;
+        padding: 0;
+        margin: 0;
     }
-    part1{
-        flex-basis: 40%;
-    }
-    .navbar-sec2,.navbar-sec3
+    .navbar
     {
-        display: none;
+        padding: 15px;
+        width: 100%;
     }
     .navbar-sec1
     {
+        display: flex;
         align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .navbar-sec1 img,h1
+    {
+        justify-content: start;
+        text-align: center;
+    }
+    .navbar-sec2
+    {
+        display: none;
+    }
+    .navbar-sec3
+    {
+        justify-content: end;
+        text-align: center;
+        width: fit-content;
+    }
+    .navbar img
+    {
+        width: 40px;
+        height: 40px;
+    }
+    .navbar-sec3 button
+    {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+    .stream h1
+    {
+        font-size: 28px;
+        text-align: center;
+        margin: 20px 0 10px 0;
     }
     .stream1
     {
-        font-size: 12px;
-        text-align: center;
-        margin: 20 0 10 0;
-
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+        width: 100%;
     }
+    .stream1_toggle
+    {
+        padding: 8px;
+        font-size: 14px;
+    }
+    /* .search
+    {
+        flex-direction: row;
+        padding: 0 ;
+        width: fit-content;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    } */
+
+.search {
+        padding: 6px 10px;
+        border-radius: 20px;
+        display: inline-block;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 400px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .search .fa-magnifying-glass {
+        font-size: 1rem; /* Smaller icon on mobile */
+        margin-right: 6px;
+    }
+
+    .search input {
+        font-size: 0.9rem; /* Slightly smaller font */
+        padding: 6px;
+    }
+
+    .search button {
+        font-size: 0.9rem;
+        padding: 6px ;
+        margin-left: 260px;
+        border-radius: 15px;
+    }
+    .part1
+    {
+        flex-direction: column;
+        height: 100%;
+        padding: 15px;
+    }
+    .part1 img
+    {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .part1-name
+    {
+        position: absolute;
+        padding: none;
+        bottom: 25px;
+        left: 25px;
+    }
+    .part1 h1
+     {
+        font-size: 32px;
+        text-align: center;
+     }
+     .part1 p
+     {
+       font-size: 16px;
+       text-align: center;
+     }
+     .part1 button
+    {
+        display: block;
+        margin: 20px 0 auto 0;
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+    .ad{
+        width: 300px;
+        height: auto;
+    }
+    .part2,.part2-section,.explore
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .part2-section img
+    {
+        width: 100%;
+        height: auto;
+    }
+    .explore img
+    {
+        width: 100%;
+        height: auto;
+    }
+    .explore-p2 img
+    {
+        height: 250px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .inspire 
+    {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 20px;
+        width: 100%;
+    }
+    .inspire-img-con 
+     {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+     }
+    .inspire img     
+     {
+        width: 100%;
+     }
+     .things-sec
+     {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+     }
+     .things-sec__places
+     {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+     }
+    .iconic
+    {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .iconic-images
+    {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .emptybox
+    {   flex-direction: column;
+        padding: 0 10px;
+        gap: 20px;
+        width: 100%;
+        height: fit-content;
+        font-size: 16px;
+        
+    }
+    .emptybox-sec2 img
+    {
+        display: none;
+    }
+     .footer
+     {
+        width: 100%;
+     }   
+     .footer-sec
+     {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        width: 100%;
+     }  
+    .footer-tail2 i{
+        flex-direction: row;
+        width: 25%;
+        gap: 15px;
+    }
+
+
+
 
 }
 
